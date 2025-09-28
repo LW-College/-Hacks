@@ -402,9 +402,6 @@ def sort():
     
     sorted_df = df.sort_values(by='FINISH_TYPE_SCORE', ascending=False)
     print(sorted_df[['PROD_ID', 'SPEC_FINISH_CAT', 'FINISH_TYPE_SCORE']])
-
-#______________________________________________________________________________________________ Prod-2725559
-
     ### PUT SPEC ALL TOGETHER ###
     df['SPEC_SCORE'] = df['PRESSURE_SCORE']*pressure_weight + df['FLOW_SCORE']*flow_weight + df['MOUNT_TYPE_SCORE']*mount_weight + df['FINISH_TYPE_SCORE']*finish_weight
 
